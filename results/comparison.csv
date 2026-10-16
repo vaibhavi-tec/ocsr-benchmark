@@ -1,0 +1,2 @@
+tool,n_images,official_accuracy_all,official_accuracy_full,official_accuracy_chiral,official_accuracy_markush,exact_match_inchikey,exact_match_no_stereo,mean_tanimoto,valid_smiles_rate,mean_runtime_s_per_image,n_errors,published_all,published_full,published_chiral,published_markush
+molglyph,5,0.8,1.0,1.0,0.6666666666666666,0.4,0.4,0.4,0.4,2.2845426582032813,0,0.764,0.758,0.504,0.77

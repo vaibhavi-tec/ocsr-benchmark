@@ -1,9 +1,33 @@
+# All paths are relative to the project root. Nothing here is machine-specific.
+
 biovista:
   # Google Drive file ID of the BioVista OCSR subset (images + SMILES labels)
   gdrive_file_id: 11iCH0j7U9iFgwXahjkWZouNyqATfEPoL
-  # Folder (relative to the project root) where the data is stored
+  # Folder where the data is stored
   output_dir: data/biovista
   # Subfolder of output_dir holding the molecule images (PNG)
   images_subdir: ocsr/data
   # Ground-truth CSV (pdf_name, index, smiles, ...) relative to output_dir
   labels_file: ocsr/labels/gd_SMIELS.csv
+
+benchmark:
+  results_dir: results
+  models_dir: models
+  sample_n: null          # null = all 8,861 images; or e.g. 500 for a quick run
+  seed: 42                # fixes which images are sampled
+  batch_size: 16
+  checkpoint_every: 200   # save progress every N images (survives Colab disconnects)
+  device: auto            # auto = CUDA if available, else CPU. Or: cpu, cuda, mps
+
+tools:
+  molscribe:
+    hf_repo: yujieq/MolScribe
+    hf_file: swin_base_char_aux_1m680k.pth
+  molglyph:
+    hf_repo: jiaxianustc/MolGlyph   # gated: accept terms on Hugging Face, set HF_TOKEN
+    hf_file: molglyph_large.pt
+
+# Published BioVista OCSR accuracy (BioMiner README), used as a reference in comparison.csv
+published:
+  molscribe: {Full: 0.703, Chiral: 0.481, Markush: 0.156, All: 0.455}
+  molglyph:  {Full: 0.758, Chiral: 0.504, Markush: 0.770, All: 0.764}
