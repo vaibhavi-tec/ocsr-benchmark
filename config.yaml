@@ -1,0 +1,9 @@
+biovista:
+  # Google Drive file ID of the BioVista OCSR subset (images + SMILES labels)
+  gdrive_file_id: 11iCH0j7U9iFgwXahjkWZouNyqATfEPoL
+  # Folder (relative to the project root) where the data is stored
+  output_dir: data/biovista
+  # Subfolder of output_dir holding the molecule images (PNG)
+  images_subdir: ocsr/data
+  # Ground-truth CSV (pdf_name, index, smiles, ...) relative to output_dir
+  labels_file: ocsr/labels/gd_SMIELS.csv
