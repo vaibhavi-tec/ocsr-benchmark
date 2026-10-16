@@ -73,8 +73,8 @@ def tanimoto(pred, true) -> float:
 
 
 # --- Official BioMiner matching (reproduces BioMiner/commons/process_mol.py) ----------
-# BioMiner has no special Markush logic: every row is scored by the same string
-# comparison, applied to RDKit canonical SMILES where '*' is a wildcard atom.
+# BioMiner has no special Markush logic: every row (Markush or not) is scored by the
+# same string comparison, applied to RDKit canonical SMILES where '*' is a wildcard atom.
 
 _CHARGE_PATTERN = Chem.MolFromSmarts("[+1!h0!$([*]~[-1,-2,-3,-4]),-1!$([*]~[+1,+2,+3,+4])]")
 
@@ -107,8 +107,8 @@ def _replace_group(smiles: str) -> str:
     return Chem.MolToSmiles(mol)
 
 
-def markush_match(pred, true) -> bool:
-    """BioMiner's check_smiles_match: neutralize charges, canonicalize, drop the
+def official_smiles_match(pred, true) -> bool:
+    """BioMiner's check_smiles_match, used for every row: neutralize charges, canonicalize, drop the
     '1' label from the first R-group, then require identical strings.
     Any failure (None, invalid SMILES) counts as a mismatch.
     """
@@ -145,9 +145,8 @@ def evaluate_pair(pred, true) -> dict:
         "true_is_markush": is_markush(true),
         "true_parseable": is_valid(true),
         "structure_type": structure_type(true),
-        # Official score: BioMiner's matcher for Markush rows, InChIKey match otherwise
-        "official_match": (markush_match(pred, true) if structure_type(true) == "markush"
-                           else exact_match(pred, true)) if structure_type(true) else None,
+        # Official score: BioMiner's matcher on every row (None for rows it skips)
+        "official_match": official_smiles_match(pred, true) if structure_type(true) else None,
     }
 
 

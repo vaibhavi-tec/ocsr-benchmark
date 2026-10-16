@@ -1,0 +1,8 @@
+pdf_name,index,image,true_smiles,structure_type,molminer_id
+286_6n9p,4,data/biovista/ocsr/data/286_6n9p_image_molminer_bbox_2-4.png,CC1=CC(C)=[NH+]2C1=Cc1ccc(CCC(=O)NCCN3CCN(C/C=C/C(=O)N4CCCC(n5nc(-c6ccc(Oc7ccccc7)cc6)c6c(N)ncnc65)C4)CC3)n1B~2(F)F,full,P2-1
+381_6jn6,9,data/biovista/ocsr/data/381_6jn6_image_molminer_bbox_2-9.png,*C(=O)N[C@H]1Cc2cccc(C(=O)O)c2O[B-]1(O)O,markush,P2-9
+460_6hwv,20,data/biovista/ocsr/data/460_6hwv_image_molminer_bbox_4-20.png,F[B-](F)(F)F.N#[N+]c1ccc(F)cc1,full,P4-13
+466_6hrt,5,data/biovista/ocsr/data/466_6hrt_image_molminer_bbox_3-5.png,CC(=O)OCc1c(-n2ncc3cc(C(C)(C)C)cc(F)c3c2=O)cccc1[B-](F)(F)F,full,P3-2
+97_6qmu,0,data/biovista/ocsr/data/97_6qmu_image_molminer_bbox_2-0.png,N[C@H](Cc1ccc([B-](O)(O)O)cc1)C(=O)O,chiral,P2-1
+97_6qmu,5,data/biovista/ocsr/data/97_6qmu_image_molminer_bbox_2-5.png,N[C@H](Cc1ccc([B-](O)(O)Oc2ccc([N+](=O)[O-])cc2O)cc1)C(=O)O,chiral,P2-6
+97_6qmu,6,data/biovista/ocsr/data/97_6qmu_image_molminer_bbox_2-6.png,N[C@H](Cc1ccc([B-]2(O)Oc3ccc([N+](=O)[O-])cc3O2)cc1)C(=O)O,chiral,P2-7
