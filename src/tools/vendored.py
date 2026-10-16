@@ -7,6 +7,9 @@ from pathlib import Path
 # torch>=2.6 refuses to unpickle those by default, so allow full loading. Only do
 # this for checkpoints from trusted sources (here: the official Hugging Face repos).
 os.environ.setdefault("TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD", "1")
+# The vendored code imports matplotlib; use its non-display backend so it works
+# outside notebooks too (Colab sets MPLBACKEND to an inline backend this env lacks).
+os.environ["MPLBACKEND"] = "Agg"
 
 import torch  # noqa: E402  (must come after the environment variable above)
 from dotenv import load_dotenv  # noqa: E402
