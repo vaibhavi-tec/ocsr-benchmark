@@ -1,86 +1,159 @@
 {
   "run_info": {
-    "timestamp_utc": "2026-10-16T16:50:37+00:00",
-    "git_commit": "68a9ce3da0cfe20d1512d0f30bf26fcc9ebcafd1",
+    "timestamp_utc": "2026-10-16T22:56:44+00:00",
+    "git_commit": "f16cbcc3559a9e8aff19bc66cf995cdbda07ef72",
     "python": "3.10.22",
-    "torch": "2.6.0",
+    "torch": "2.6.0+cu124",
     "rdkit": "2026.09.1",
-    "cuda_available": false,
-    "n_images": 5,
-    "seed": 0,
+    "cuda_available": true,
+    "n_images": 8861,
+    "seed": 42,
     "device_setting": "auto"
   },
   "tools": {
-    "molglyph": {
+    "molscribe": {
       "overall": {
-        "is_valid": 0.4,
-        "exact_match": 0.4,
-        "exact_match_no_stereo": 0.4,
-        "tanimoto": 0.4,
-        "official_match": 0.8,
-        "n": 5
+        "is_valid": 0.8023925064891095,
+        "exact_match": 0.38201105969980814,
+        "exact_match_no_stereo": 0.4136102020088026,
+        "tanimoto": 0.46660479254294934,
+        "official_match": 0.46146033179099427,
+        "n": 8861
       },
       "by_type": {
         "chiral": {
-          "is_valid": 1.0,
-          "exact_match": 1.0,
-          "exact_match_no_stereo": 1.0,
-          "tanimoto": 1.0,
-          "official_match": 1.0,
-          "n": 1
+          "is_valid": 0.869538077403246,
+          "exact_match": 0.5780274656679151,
+          "exact_match_no_stereo": 0.7128589263420724,
+          "tanimoto": 0.8266677562957278,
+          "official_match": 0.581772784019975,
+          "n": 1602
         },
         "full": {
-          "is_valid": 1.0,
-          "exact_match": 1.0,
-          "exact_match_no_stereo": 1.0,
-          "tanimoto": 1.0,
-          "official_match": 1.0,
-          "n": 1
+          "is_valid": 0.9127082048118446,
+          "exact_match": 0.7584824182603331,
+          "exact_match_no_stereo": 0.7782233189389266,
+          "tanimoto": 0.8668301422385314,
+          "official_match": 0.7637260950030845,
+          "n": 3242
         },
         "markush": {
-          "is_valid": 0.0,
+          "is_valid": 0.6865820263878516,
           "exact_match": 0.0,
           "exact_match_no_stereo": 0.0,
           "tanimoto": 0.0,
-          "official_match": 0.6666666666666666,
-          "n": 3
+          "official_match": 0.169529499626587,
+          "n": 4017
         }
       },
       "official_groups": {
         "Full": {
-          "is_valid": 1.0,
-          "exact_match": 1.0,
-          "exact_match_no_stereo": 1.0,
-          "tanimoto": 1.0,
-          "official_match": 1.0,
-          "n": 2
+          "is_valid": 0.8984310487200661,
+          "exact_match": 0.6988026424442609,
+          "exact_match_no_stereo": 0.7566061106523534,
+          "tanimoto": 0.8535477016356471,
+          "official_match": 0.70355078447564,
+          "n": 4844
         },
         "Chiral": {
-          "is_valid": 1.0,
-          "exact_match": 1.0,
-          "exact_match_no_stereo": 1.0,
-          "tanimoto": 1.0,
-          "official_match": 1.0,
-          "n": 1
+          "is_valid": 0.7641255605381166,
+          "exact_match": 0.41524663677130047,
+          "exact_match_no_stereo": 0.5121076233183857,
+          "tanimoto": 0.5938662536258995,
+          "official_match": 0.4856502242152466,
+          "n": 2230
         },
         "Markush": {
-          "is_valid": 0.0,
+          "is_valid": 0.6865820263878516,
           "exact_match": 0.0,
           "exact_match_no_stereo": 0.0,
           "tanimoto": 0.0,
-          "official_match": 0.6666666666666666,
-          "n": 3
+          "official_match": 0.169529499626587,
+          "n": 4017
         }
       },
       "flags": {
-        "pred_is_markush": 0.6,
-        "true_is_markush": 0.6,
-        "true_parseable": 0.4
+        "pred_is_markush": 0.1690554113531204,
+        "true_is_markush": 0.4533348380543957,
+        "true_parseable": 0.5465523078659293
       },
       "n_excluded": 0,
       "runtime": {
-        "mean_s_per_image": 2.2845426582032813,
-        "total_s": 11.422713291016407
+        "mean_s_per_image": 0.2018920213502989,
+        "total_s": 1788.9652011849987
+      },
+      "n_errors": 0
+    },
+    "molglyph": {
+      "overall": {
+        "is_valid": 0.5307527367114321,
+        "exact_match": 0.4128202234510778,
+        "exact_match_no_stereo": 0.4663130572170184,
+        "tanimoto": 0.49508709164484677,
+        "official_match": 0.7630064326825414,
+        "n": 8861
+      },
+      "by_type": {
+        "chiral": {
+          "is_valid": 0.9088639200998752,
+          "exact_match": 0.5393258426966292,
+          "exact_match_no_stereo": 0.785892634207241,
+          "tanimoto": 0.8698424513661087,
+          "official_match": 0.5405742821473158,
+          "n": 1602
+        },
+        "full": {
+          "is_valid": 0.946329426280074,
+          "exact_match": 0.8618136952498457,
+          "exact_match_no_stereo": 0.8861813695249846,
+          "tanimoto": 0.9233433411401855,
+          "official_match": 0.863972856261567,
+          "n": 3242
+        },
+        "markush": {
+          "is_valid": 0.04456061737615136,
+          "exact_match": 0.0,
+          "exact_match_no_stereo": 0.0,
+          "tanimoto": 0.0,
+          "official_match": 0.7702265372168284,
+          "n": 4017
+        }
+      },
+      "official_groups": {
+        "Full": {
+          "is_valid": 0.9339388934764657,
+          "exact_match": 0.7551610239471511,
+          "exact_match_no_stereo": 0.8530140379851362,
+          "tanimoto": 0.9056496116979742,
+          "official_match": 0.7570189925681255,
+          "n": 4844
+        },
+        "Chiral": {
+          "is_valid": 0.6762331838565022,
+          "exact_match": 0.3874439461883408,
+          "exact_match_no_stereo": 0.5645739910313902,
+          "tanimoto": 0.6248823350172673,
+          "official_match": 0.5026905829596413,
+          "n": 2230
+        },
+        "Markush": {
+          "is_valid": 0.04456061737615136,
+          "exact_match": 0.0,
+          "exact_match_no_stereo": 0.0,
+          "tanimoto": 0.0,
+          "official_match": 0.7702265372168284,
+          "n": 4017
+        }
+      },
+      "flags": {
+        "pred_is_markush": 0.45852612571944473,
+        "true_is_markush": 0.4533348380543957,
+        "true_parseable": 0.5465523078659293
+      },
+      "n_excluded": 0,
+      "runtime": {
+        "mean_s_per_image": 0.13661029655806323,
+        "total_s": 1210.5038378009983
       },
       "n_errors": 0
     }
